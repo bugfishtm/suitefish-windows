@@ -1,5 +1,7 @@
 # Suitefish - Windows Client
 
+> 🚧 **This project is currently in development and should NOT be used in production.**  
+
 ## 🔍 Introduction
 
 The Suitefish CMS Windows Client allows you to easily download and access software from the Suitefish store for various purposes. Once downloaded, the client connects seamlessly with your Suitefish CMS instance, providing a user-friendly interface to manage your content, configure settings, and interact with the CMS system directly from your Windows device. Perfect for managing all aspects of SuiteFish CMS on your desktop.
