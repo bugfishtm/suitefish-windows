@@ -2,6 +2,7 @@
 using suitefish.Library;
 using suitefish.Properties;
 using System;
+using System.ComponentModel;
 using System.Data;
 using System.Data.Entity.Core.Metadata.Edm;
 using System.Data.SQLite;
@@ -77,7 +78,7 @@ namespace suitefish
         ////////////////////////////////////////////////////////////
         /// Software Version and Variables
         ////////////////////////////////////////////////////////////
-        const string SF_VERSION_CR = "1.0.1";
+        const string SF_VERSION_CR = "1.0.3";
         private string constant_default_server = "https://suitefish.com";
 
         ////////////////////////////////////////////////////////////
@@ -1975,7 +1976,23 @@ namespace suitefish
             folderName = "sf-apps\\" + foldervalue;
             string finalfolder = Path.Combine(exeDirectory, folderName);
             string finalized = finalfolder + "\\" + xecvalue;
-            Process.Start(@finalized);
+
+            var procInfo = new ProcessStartInfo();
+            procInfo.FileName = finalized;
+            procInfo.WorkingDirectory = finalfolder;
+            procInfo.UseShellExecute = true;      // if you need elevation, set Verb = "runas" here
+                                                  // procInfo.Verb = "runas"; // if needed for admin rights
+
+            try
+            {
+                Process.Start(procInfo);
+            }
+            catch (Exception ex)
+            {
+                if (SF_DEBUG_CR) { 
+                    Console.WriteLine("Error starting process: " + ex.Message);
+                }
+            }
         }
 
         ////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
