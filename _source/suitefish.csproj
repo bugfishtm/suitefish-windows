@@ -8,8 +8,8 @@
     <UseWindowsForms>true</UseWindowsForms>
     <ImplicitUsings>enable</ImplicitUsings>
     <ApplicationIcon>Images\favicon.ico</ApplicationIcon>
-    <AssemblyVersion>1.0.3</AssemblyVersion>
-    <FileVersion>1.0.3</FileVersion>
+    <AssemblyVersion>1.0.4</AssemblyVersion>
+    <FileVersion>1.0.4</FileVersion>
     <Title>Suitefish</Title>
     <Company>Bugfish Industries</Company>
     <Product>Suitefish</Product>
@@ -17,7 +17,7 @@
     <Copyright>Open Source License</Copyright>
     <PackageProjectUrl>https://github.com/bugfishtm/suitefish-windows</PackageProjectUrl>
     <PackageIcon>suitefish_logo_alpha.png</PackageIcon>
-    <Version>1.0.3</Version>
+    <Version>1.0.4</Version>
     <RepositoryUrl>https://github.com/bugfishtm/suitefish-windows</RepositoryUrl>
     <ApplicationManifest>app.manifest</ApplicationManifest>
   </PropertyGroup>

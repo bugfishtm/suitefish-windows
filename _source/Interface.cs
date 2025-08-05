@@ -78,7 +78,7 @@ namespace suitefish
         ////////////////////////////////////////////////////////////
         /// Software Version and Variables
         ////////////////////////////////////////////////////////////
-        const string SF_VERSION_CR = "1.0.3";
+        const string SF_VERSION_CR = "1.0.4";
         private string constant_default_server = "https://suitefish.com";
 
         ////////////////////////////////////////////////////////////
@@ -2781,7 +2781,7 @@ namespace suitefish
             labelServer.Visible = true;
             labelServer.ForeColor = Color.LightBlue;
             labelServer.Text = translateKey("llupdate_loading");
-            json_software = await SF_GetJson(setting_server_store + "/_api/v1.php?api_action=store_mod_list");
+            json_software = await SF_GetJson(setting_server_store + "/_api/v1.php?api_action=store_mod_list_sw");
 
             if (SF_DEBUG_CR)
             {
